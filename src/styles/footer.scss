@@ -1,0 +1,88 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.footer {
+  .boost {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 200px;
+
+    background: url("/images/bg-boost-desktop.svg");
+    background-color: $dark-violet;
+
+    text-align: center;
+
+    h3 {
+      font-size: 2em;
+      color: #fff;
+      margin: 10px 0;
+    }
+
+    .btn {
+      @include primary-btn;
+    }
+  }
+
+  .info {
+    background: $very-dark-violet;
+
+    .grid-3 {
+      width: 80%;
+      margin: 0 auto;
+      padding: 50px 0;
+      display: grid;
+      grid-template-columns: 1fr 50% 1fr;
+    }
+
+    .logo {
+      h3 {
+        font-size: 2em;
+        color: #fff;
+      }
+    }
+
+    .other-links {
+      display: flex;
+      justify-content: space-between;
+
+      h4 {
+        color: #fff;
+      }
+
+      button {
+        @include link;
+        display: block;
+        font-weight: 500;
+        font-size: 0.9em;
+        margin: 10px 0;
+
+        &:hover {
+          color: $cyan;
+        }
+      }
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        display: inline-block;
+        margin: 0 10px;
+        color: #fff;
+
+        font-size: 1.5em;
+
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          color: $cyan;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.wrapper {
+  background: rgba($color: $gray, $alpha: 0.2);
+
+  .statistics {
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+
+    .info {
+      text-align: center;
+
+      .title {
+        font-size: 2em;
+        color: $very-dark-violet;
+      }
+
+      p {
+        @include parragraph;
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 80%;
+      margin: 60px auto;
+
+      height: 350px;
+      column-gap: 30px;
+
+      div {
+        display: flex;
+      }
+    }
+
+    .one {
+      align-items: flex-start;
+    }
+
+    .two {
+      align-items: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        height: 10px;
+        width: 30px;
+        background: $cyan;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        height: 10px;
+        width: 30px;
+        background: $cyan;
+      }
+    }
+
+    .three {
+      align-items: flex-end;
+    }
+
+    .card {
+      @include card;
+    }
+  }
+}

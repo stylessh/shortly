@@ -1,0 +1,87 @@
+@import "./variables.scss";
+
+@mixin link {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  color: $grayish-violet;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $very-dark-violet;
+  }
+}
+
+@mixin primary-btn {
+  border: none;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+  background: $cyan;
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: lighten($color: $cyan, $amount: 20);
+  }
+
+  &:focus {
+    background: $very-dark-violet;
+  }
+}
+
+@mixin parragraph {
+  color: $grayish-violet;
+  font-size: 1em;
+}
+
+@mixin card {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+
+  .icon {
+    position: absolute;
+
+    top: -32px;
+    left: 10%;
+
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: $dark-violet;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 32px;
+      height: 32px;
+      vertical-align: top;
+    }
+  }
+
+  h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: $very-dark-violet;
+  }
+
+  p {
+    @include parragraph();
+    font-size: 0.9em;
+  }
+}

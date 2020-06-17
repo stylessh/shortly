@@ -1,0 +1,45 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        width: 80%;
+        margin: auto;
+
+        align-items: center;
+        column-gap: 50px;
+    }
+
+    .info {
+        .title {
+            font-size: 3.5em;
+            line-height: -20px;
+            color: $very-dark-blue;
+        }
+
+        .lead {
+            @include parragraph;
+        }
+
+        .btn {
+            margin: 20px 0;
+            @include primary-btn;
+        }
+    }
+
+    .image {
+        img {
+            vertical-align: top;
+            margin-right: -300px;
+        }
+    }
+}
