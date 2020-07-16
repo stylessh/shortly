@@ -1,4 +1,4 @@
-import React, { Component, useRef } from "react";
+import React, { Component } from "react";
 import "../styles/shorten.scss";
 
 import { createShortedLink, getShortedLink } from "../api";
@@ -133,7 +133,12 @@ const ShortedLink = ({ shortedUrl, url, index }) => {
       <div className="info">
         <p className="original-link">{url}</p>
 
-        <a href={shortedUrl} target="_blank" rel="noopener noreferrer" className="shorted-url">
+        <a
+          href={shortedUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="shorted-url"
+        >
           {shortedUrl}
         </a>
       </div>
